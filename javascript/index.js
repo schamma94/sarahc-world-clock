@@ -28,7 +28,7 @@ function updateTime() {
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
-  // let cityName = cityTimeZone.replace("_", " ").split("/")[1]; - if a city with 2 words is an option
+  let cityName = cityTimeZone.replace("_", " ").split("/")[1]; // - if a city with 2 words is an option
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
   citiesElement.innerHTML = `
